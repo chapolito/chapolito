@@ -1,0 +1,25 @@
+.logo {
+
+  img {
+    height: $baseline * 2;
+    margin-top: $baseline * 3;
+    margin-bottom: $baseline * 3;
+    margin-left: -12px;
+  }
+}
+
+.top-nav {
+  text-align: right;
+
+  h3 {
+    color: $slate;
+    display: inline-block;
+    line-height: $baseline * 2;
+    margin-top: $baseline * 3;
+    margin-bottom: $baseline * 3;
+
+    &:first-of-type {
+      margin-right: $baseline;
+    }
+  }
+}

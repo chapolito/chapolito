@@ -1,0 +1,16 @@
+---
+title: About Chapolito.com
+---
+
+.row
+  .col-xs-offset-2.col-xs-22.text-center
+    %h1 About
+
+.row
+  .col-xs-offset-2.col-xs-22.text-center
+    %h2 Philosophy
+  
+  - data.philosophy.each do |tenant|
+    .col-xs-offset-2.col-xs-4
+      %h5= tenant.title
+      %p= tenant.principle
