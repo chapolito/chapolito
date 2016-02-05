@@ -11,6 +11,7 @@
 
     = stylesheet_link_tag 'all' 
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Alegreya:400,700,400italic,700italic|Montserrat:700'
+    //= stylesheet_link_tag 'http://basehold.it/28'
     = javascript_include_tag  'all' 
 
   %body( class='#{page_classes}' )
@@ -19,8 +20,8 @@
       .logo.col-xs-offset-2.col-xs-10
         = image_tag 'chapolito-logo.svg'
       .top-nav.col-xs-offset-2.col-xs-10
-        %h3 Portfolio
-        %h3 About
+        %h3= link_to 'Portfolio', '/'
+        %h3= link_to 'About', '/about'
 
     = yield 
 
@@ -39,15 +40,19 @@
       .bottom-nav.col-xs-offset-2.col-xs-4
         %ul
           %li
-            %h6 Portfolio
+            %h6= link_to 'Portfolio', '/'
           %li
-            %h6 About
+            %a
+              %h6= link_to 'About', '/about'
           %li
-            %h6 Testimonials
+            %a
+              %h6= link_to 'Testimonials', '/testimonials'
           %li
-            %h6 Design Resources
+            %a
+              %h6= link_to 'Design Resources', '/free-design-resources'
           %li
-            %h6 Contact
+            %a
+              %h6= link_to 'Contact', '/contact'
       .col-xs-offset-2.col-xs-4
         %p.small
           The portfolio of San Diego, California based Creative Director &amp; Designer Jesse Chapo. 

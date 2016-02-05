@@ -3,13 +3,13 @@ footer {
   background-color: $footerGradient2;
   @include background-image(linear-gradient(to left top, $footerGradient1, $footerGradient2));
   color: $coolWhite;
-  padding-top: $baseline * 4;
-  padding-bottom: $baseline * 4;
+  padding-top: $baseline_em * 4;
+  padding-bottom: $baseline_em * 4;
 
   p {
     color: inherit;
   }
-  
+
   .small {
     @include opacity(0.7);
   }
@@ -23,6 +23,10 @@ footer {
   a.x-small {
     @include opacity(0.3);
     color: $coolWhite;
+
+    &:hover {
+      @include opacity(0.4);
+    }
   }
 
   .phone-number {
@@ -53,5 +57,28 @@ footer {
       margin-top: 0;
       margin-bottom: $baseline;
     }
+  }
+
+  a, a:hover {
+    color: $coolWhite;
+    text-decoration: none;
+
+    &:after {
+      @include transition(opacity 300ms ease-in);
+      @include opacity(0);
+      content: ' ';
+      display: block;
+      border-bottom: 1px solid $linkOrange;
+      margin: 0 auto;
+      margin-bottom: -1px;
+    }
+  }
+
+  a:hover:after {
+    @include opacity(1);
+  }
+
+  a:active:after {
+    border-bottom: 1px solid $linkOrange_hover;
   }
 }

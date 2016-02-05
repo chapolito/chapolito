@@ -12,15 +12,15 @@ body {
   background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
   font-family: 'Alegreya', serif;
-  font-size: 18px;
-  line-height: $baseline;
+  font-size: 100%;
+  line-height: $baseline_em;
   font-weight: 400;
   color: $darkSlate;
   background-attachment: fixed;
 }
 
 header {
-  height: $baseline * 8;
+  height: $baseline_em * 8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,58 +28,92 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.2em;
-  line-height: $baseline;
+  margin-top: 0;
 }
 
+/* 
+  
+  Vertical Rhythym (baseline grid) calculations
+  
+  h7 {
+    font-size: desired pixel size / default pixel size (16)
+    line-height: baseline / desired pixel size
+    margin-bottom: baseline(s) in line-height / pixel size
+  }
+
+*/
+
+
 h1 {
-  font-size: 34px;
-  letter-spacing: 7px;
-  margin-top: $baseline * 4;
-  margin-bottom: $baseline * 4;
+  font-size:  2.125em; // 34 / 16
+  line-height: 1.6470588235em; // 56 / 34
+  margin-top:  0.8235294118em * 4; // 28 / 34
+  margin-bottom: 0.8235294118em * 4; // 28 / 34
+
+  &:after {
+    content: ' ';
+    display: block;
+    width: 150px;
+    border-bottom: 2px solid $linkOrange;
+    margin: 0 auto;
+    margin-bottom: -2px;
+  }
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 1.75em; // 28 / 16
+  line-height: 1em; // 28 / 28
+  margin-bottom: 1em; // 28 / 28
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.25em; // 20 / 16
+  line-height: 1.4em; // 28 / 20
+  margin-bottom: 1.4em; // 28 / 20
 }
 
-h4 {
-  font-size: 18px;
+h4, p {
+  font-size: 1.125em; // 18 / 16
+  line-height: 1.5555555556em; // 28 / 18
+  margin-bottom: 1.5555555556em; // 28 / 18
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 1em; // 16 / 16
+  line-height: 1.75em; // 28 / 16
+  margin-bottom: 1.75em; // 28 / 16
 }
 
-h6 {
-  font-size: 14px;
+h6, .small {
+  font-size: 0.875em; // 14 / 16
+  line-height: 2em; // 28 / 14
+  margin-bottom: 2em; // 28 / 14
+}
+
+.x-small {
+  font-size: 0.75em; // 12 / 16
+  line-height: 2.3333333333em; // 28 / 12
+  margin-bottom: 2.3333333333em; // 28 / 12
 }
 
 p {
   color: $bodyCopyColor;
   margin-top: 0;
-  margin-bottom: $baseline; 
 
   &:last-of-type {
-    margin-bottom: $baseline * 4;
+    margin-bottom: 2.3333333333em * 4; // 28 / 12 * 4
   }
 }
 
 a {
   color: $linkOrange;
+
+  &:hover {
+    color: $linkOrange_hover;
+  }
 }
 
 .text-center {
   text-align: center; 
 }
 
-.small {
-  font-size: 15px;
-}
-
-.x-small {
-  font-size: 13px;
-}

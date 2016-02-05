@@ -8,6 +8,7 @@
 
 // Variables
 $baseline: 28px;
+$baseline_em: 1.75em; // 28 / 16
 
 // Colors
 $slate: #6b7c85;
@@ -15,14 +16,20 @@ $darkSlate: #232c30;
 $coolWhite: #fafdff;
 $lightCyan: #dcf1fa;
 $linkOrange: #ff5d3f;
-$footerGradient1: #113342;
-$footerGradient2: #1a2a30;
+$linkOrange_hover: #ff854c;
+$footerGradient1: #123b4c;
+$footerGradient2: #162329;
+//$footerGradient1: #113342;
+//$footerGradient2: #1a2a30;
 $bodyCopyColor: #5a6367;
 
 // Global
+@import 'mixins';
 @import 'base';
 @import 'header';
 @import 'footer';
 
 // Views
 @import 'testimonials';
+@import 'about';
+@import 'contact';

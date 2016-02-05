@@ -2,7 +2,6 @@
 
   p, h5, h6 {
     margin-bottom: 0;
-    margin-top: 0;
   }
 
   h5 {
@@ -11,6 +10,6 @@
   }
 
   h6 {
-    margin-bottom: $baseline * 4;
+    margin-bottom: 1.5555555556em * 4; // 28 / 18 * 4
   }
 }
