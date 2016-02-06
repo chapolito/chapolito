@@ -23,6 +23,13 @@ $footerGradient2: #162329;
 //$footerGradient2: #1a2a30;
 $bodyCopyColor: #5a6367;
 
+
+$baseFontSize: 16px;
+
+@function em($px, $base: $baseFontSize) {
+  @return ($px / $base) * 1em;
+}
+
 // Global
 @import 'mixins';
 @import 'base';
