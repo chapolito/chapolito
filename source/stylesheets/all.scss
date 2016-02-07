@@ -8,9 +8,13 @@
 
 // Variables
 $baseline: 28px;
-$baseline_em: 1.75em; // 28 / 16
+$baseFontSize: 16px;
 
-// Colors
+@function rem($px, $base: $baseFontSize) {
+  @return ($px / $base) * 1rem;
+}
+
+// s
 $slate: #6b7c85;
 $darkSlate: #232c30;
 $coolWhite: #fafdff;
@@ -19,24 +23,55 @@ $linkOrange: #ff5d3f;
 $linkOrange_hover: #ff854c;
 $footerGradient1: #123b4c;
 $footerGradient2: #162329;
-//$footerGradient1: #113342;
-//$footerGradient2: #1a2a30;
 $bodyCopyColor: #5a6367;
 
+// Fanpics
+$fanpicsSlate0: #fafdff;
+$fanpicsSlate1: #f5fcff;
+$fanpicsSlate2: #dcf1fa;
+$fanpicsSlate3: #b5cad4;
+$fanpicsSlate4: #768b94;
+$fanpicsSlate5: #53666e;
+$fanpicsSlate6: #222d33;
+$fanpicsSlate7: #1a2226;
+$fanpicsCream1: #fffff9;
+$fanpicsCream2: #fafaf0;
+$fanpicsCream3: #f4f5e0;
+$fanpicsAzure1: #49baf2;
+$fanpicsAzure2: #2ba0da;
+$fanpicsAzure3: #0e82bc;
+$fanpicsWatermelon1: #ff8587;
+$fanpicsWatermelon2: #f15f61;
+$fanpicsWatermelon3: #d93f41;
+$fanpicsGreen1: #49e072;
+$fanpicsGreen2: #39d46a;
+$fanpicsOrange1: #f7863a;
 
-$baseFontSize: 16px;
+// Spritzr
+$spritzrWhite: #f5fdff;
+$spritzrLink: #ffc466;
+$spritzrLapis2: #2484f2;
+$spritzrLapis3: #0a3a6f;
 
-@function em($px, $base: $baseFontSize) {
-  @return ($px / $base) * 1em;
-}
+// The Wiki Game
+$wikiGameBlue: #2984ce;
+$wikiGameBrown4: #39332b;
+$wikiGameBrown2: #766b5b;
+$wikiGameSand1: #eeefe1;
+
 
 // Global
 @import 'mixins';
 @import 'base';
+@import 'ampersand';
 @import 'header';
 @import 'footer';
 
 // Views
-@import 'testimonials';
-@import 'about';
-@import 'contact';
+@import 'views/home';
+@import 'views/testimonials';
+@import 'views/about';
+@import 'views/contact';
+@import 'views/case_studies';
+@import 'views/fanpics';
+

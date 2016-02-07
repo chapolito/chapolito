@@ -1,7 +1,7 @@
 
 .portrait {
   float: right;
-  margin: 0 0 $baseline_em $baseline_em;
+  margin: 0 0 rem($baseline) rem($baseline);
 
   img {
     @include border-radius(50%);
@@ -19,6 +19,6 @@
   }
 
   [class^='col-'], [class*='col-'] {
-    margin-bottom: $baseline_em * 2;
+    margin-bottom: rem($baseline * 2);
   }
 }

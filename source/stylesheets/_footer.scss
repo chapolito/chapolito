@@ -3,8 +3,8 @@ footer {
   background-color: $footerGradient2;
   @include background-image(linear-gradient(to left top, $footerGradient1, $footerGradient2));
   color: $coolWhite;
-  padding-top: $baseline_em * 4;
-  padding-bottom: $baseline_em * 4;
+  padding-top: rem($baseline * 4);
+  padding-bottom: rem($baseline * 4);
 
   p {
     color: inherit;
@@ -16,8 +16,8 @@ footer {
 
   p.x-small {
     @include opacity(0.5);
-    margin-bottom: 4px;
-    line-height: $baseline - 4px;
+    margin-bottom: rem(4px);
+    line-height: rem($baseline - 4px);
   }
 
   a.x-small {

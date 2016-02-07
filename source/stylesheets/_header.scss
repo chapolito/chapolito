@@ -41,12 +41,14 @@
   }
 
   a {
-    @include transition(color 150ms ease-out, text-shadow 150ms ease-out);
-    color: $slate;
+    @include transition(color 150ms ease-out, opacity 150ms ease-out, text-shadow 150ms ease-out);
+    @include opacity(0.6);
+    color: $darkSlate;
     text-decoration: none;
   
     &:hover {
       //@include animation(alternate dropping 500ms ease-out infinite);
+      @include opacity(1);
       color: $linkOrange;
       text-shadow: 0.5px 1px 0px rgba(255, 255, 255, 1), 1.5px 3px 0px rgba(44, 248, 255, 1);
     }
