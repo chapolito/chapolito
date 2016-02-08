@@ -34,7 +34,7 @@ footer {
   }
 
   .mail-address {
-    margin-top: $baseline;
+    margin: $baseline 0 0 0;
   }
 }
 
@@ -56,6 +56,10 @@ footer {
     h6 {
       margin-top: 0;
       margin-bottom: $baseline;
+    }
+
+    li:last-of-type h6 {
+      margin-bottom: 0;
     }
   }
 

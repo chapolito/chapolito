@@ -1,9 +1,9 @@
 
 .fanpics-stripe-pattern {
   background-color: $fanpicsAzure3;
-  background-image: url('/images/fanpics-pattern.svg');
+  background-image: url('/images/fanpics/fanpics-pattern.svg');
   background-repeat: repeat-y;
-  background-size: contain;
+  background-size: 100% auto;;
 
   .caption {
     color: $fanpicsSlate0;
@@ -32,14 +32,64 @@
   }
 }
 
-.fanpics-logos {
+.fanpics-android {
+
+  .row {
+    padding-top: rem($baseline * 4);
+    background-color: $fanpicsSlate2;
+  }
+}
+
+.fotg-badge {
+  padding-top: rem($baseline * 4);
 
   img {
-    width: 100%;
+    max-width: 443px;
+    display: inline-block;
+  }
+}
+
+.fanpics-prototyping {
+
+  .row {
+    background-color: $fanpicsGreen1;
+    padding: rem($baseline * 4) 0;
+  }
+
+  video {
     display: block;
   }
 }
 
+.your-games {
+  background-color: $fanpicsSlate7;
+}
+
+.fanpics-admin {
+  background-color: $fanpicsSlate6;
+  
+  p, .caption {
+    color: $fanpicsSlate3;
+  }
+
+  h3 {
+    color: $fanpicsSlate1;
+  }
+
+  .row {
+    background-color: $fanpicsSlate7;
+    padding-top: rem($baseline * 4);
+  }
+}
+
+ .brain-icon {
+  padding: rem($baseline * 4) 0;
+
+  img {
+    max-width: 160px;
+    display: inline-block;
+  }
+ }
 
 @include at-least($medium-screen) {
 

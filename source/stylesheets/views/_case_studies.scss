@@ -1,6 +1,11 @@
 
 .case-study {
   
+  img {
+    width: 100%;
+    display: block;
+  }
+
   h3 {
     margin-top: rem($baseline * 4);
     text-transform: none;
