@@ -47,6 +47,12 @@ end
 #   end
 # end
 
+helpers do
+  def is_page_active(page)
+    current_page.url == page ? {:class => 'is-active'} : {}
+  end
+end
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

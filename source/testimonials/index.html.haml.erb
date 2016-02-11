@@ -1,13 +1,15 @@
 ---
 title: Testimonials of Chapolito.com
+description: Reviews and Testimonials about Jesse Chapo from past clients, employers and coworkers.
 ---
 
 .testimonial-reviews.row
   .col-xs-offset-2.col-xs-22.text-center
     %h1 Testimonials
-  
-  - data.testimonials.each do |review|
-    .col-xs-offset-2.col-xs-6
-      %h5= review.title
-      %p= review.testimonial
-      %h6= review.reviewer
+  .col-xs-offset-2.col-xs-24
+    .testimonial-columns
+      - data.testimonials.each do |review|
+        .testimonial
+          %h5= review.title
+          %p= review.testimonial
+          %h6= review.reviewer

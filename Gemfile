@@ -20,3 +20,5 @@ gem 'compass-rails', :require => false
 gem 'haml'
 
 gem 'actionview-encoded_mail_to'
+
+gem 'middleman-minify-html'

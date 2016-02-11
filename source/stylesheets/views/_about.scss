@@ -1,16 +1,22 @@
 
 .portrait {
-  float: right;
-  margin: 0 0 rem($baseline) rem($baseline);
+  text-align: center;
 
   img {
     @include border-radius(50%);
-    height: auto;
-    width: 100%;
+    margin: 0 auto;
+    margin-bottom: rem($baseline * 2);
+    height: rem($baseline * 6);
+    display: block;
   }
 }
 
 .philosophy {
+  margin-bottom: rem($baseline * 2);
+
+  h2 {
+    margin-bottom: 0;
+  }
 
   h5 {
     text-transform: none;
@@ -20,5 +26,20 @@
 
   [class^='col-'], [class*='col-'] {
     margin-bottom: rem($baseline * 2);
+  }
+}
+
+@include at-least($tablet) {
+
+  .portrait {
+    float: right;
+    margin: 0 0 rem($baseline) rem($baseline);
+
+    img {
+      margin-bottom: 0;
+      height: auto;
+      width: 100%;
+      max-width: 260px;
+    }
   }
 }

@@ -16,28 +16,27 @@
 //   } 
 // }
 
+// header {
+//   height: rem($baseline * 8);
+// }
+
 .logo {
 
   img {
     height: $baseline * 2;
-    margin-top: $baseline * 3;
-    margin-bottom: $baseline * 3;
-    margin-left: -12px;
+    margin: $baseline auto;
+    display: block;
+    @include transform(translateX(-12px));
   }
 }
 
 .top-nav {
-  text-align: right;
+  text-align: center;
 
   h3 {
-    display: inline-block;
-    line-height: $baseline * 2;
-    margin-top: $baseline * 3;
-    margin-bottom: $baseline * 3;
-
-    &:first-of-type {
-      margin-right: $baseline;
-    }
+    line-height: $baseline;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   a {
@@ -45,13 +44,40 @@
     @include opacity(0.6);
     color: $darkSlate;
     text-decoration: none;
-  
-    &:hover {
-      //@include animation(alternate dropping 500ms ease-out infinite);
-      @include opacity(1);
-      color: $linkOrange;
-      text-shadow: 0.5px 1px 0px rgba(255, 255, 255, 1), 1.5px 3px 0px rgba(44, 248, 255, 1);
-    }
+  }
+
+  .is-active a, a:hover {
+    //@include animation(alternate dropping 500ms ease-out infinite);
+    @include opacity(1);
+    color: $linkOrange;
+    text-shadow: 0.5px 1px 0px rgba(255, 255, 255, 1), 1.5px 3px 0px rgba(44, 248, 255, 1);
   }
 }
 
+@include at-least($tablet) {
+
+  .top-nav {
+    text-align: right;
+
+    h3 {
+      display: inline-block;
+      line-height: $baseline * 2;
+      margin-top: $baseline * 3;
+      margin-bottom: $baseline * 3;
+
+      &:first-of-type {
+        margin-right: $baseline;
+      }
+    }
+  }
+
+  .logo {
+    text-align: left;
+
+    img {
+      margin-left: -12px;
+      margin-top: $baseline * 3;
+      margin-bottom: $baseline * 3;
+    }
+  }
+}

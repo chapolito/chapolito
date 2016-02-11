@@ -14,7 +14,7 @@ $baseFontSize: 16px;
   @return ($px / $base) * 1rem;
 }
 
-// s
+// Colors
 $slate: #6b7c85;
 $darkSlate: #232c30;
 $coolWhite: #fafdff;
@@ -48,16 +48,23 @@ $fanpicsGreen2: #39d46a;
 $fanpicsOrange1: #f7863a;
 
 // Spritzr
-$spritzrWhite: #f5fdff;
+$spritzrWhite1: #f5fdff;
+$spritzrWhite2: #c9e7f0;
 $spritzrLink: #ffc466;
+$spritzrGold: #ffc466;
+$spritzrLapis1: #2b8eff;
 $spritzrLapis2: #2484f2;
 $spritzrLapis3: #0a3a6f;
+$spritzrCopy: #363e42;
+$spritzrHeadlines: #0d0e0f;
 
 // The Wiki Game
-$wikiGameBlue: #2984ce;
-$wikiGameBrown4: #39332b;
-$wikiGameBrown2: #766b5b;
-$wikiGameSand1: #eeefe1;
+$theWikiGameBlue1: #44b3e6;
+$theWikiGameBlue2: #2984ce;
+$theWikiGameBrown4: #39332b;
+$theWikiGameBrown2: #766b5b;
+$theWikiGameSand0: #fefff5;
+$theWikiGameSand1: #eef0dd;
 
 
 // Global
@@ -75,4 +82,5 @@ $wikiGameSand1: #eeefe1;
 @import 'views/case_studies';
 @import 'views/fanpics';
 @import 'views/spritzr';
+@import 'views/the-wiki-game';
 
