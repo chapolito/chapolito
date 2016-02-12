@@ -23,8 +23,8 @@
 .logo {
 
   img {
-    height: $baseline * 2;
-    margin: $baseline auto;
+    height: rem($baseline * 2);
+    margin: rem($baseline) auto;
     display: block;
     @include transform(translateX(-12px));
   }
@@ -32,6 +32,7 @@
 
 .top-nav {
   text-align: center;
+  margin-bottom: rem($baseline * 2);
 
   h3 {
     line-height: $baseline;
@@ -58,6 +59,7 @@
 
   .top-nav {
     text-align: right;
+    margin-bottom: 0;
 
     h3 {
       display: inline-block;

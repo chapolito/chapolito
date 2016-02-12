@@ -70,13 +70,29 @@
 .fanpics-prototyping {
 
   .row {
+    width: 100%;
     background-color: $fanpicsGreen1;
     padding: rem($baseline * 4) 0;
+
+    video {
+      margin-bottom: rem($baseline);
+    }
   }
 }
 
 .your-games {
   background-color: $fanpicsSlate7;
+}
+
+.fanpics-posters {
+
+  .col-xs-22 img {
+    margin-bottom: rem($baseline);
+  }
+
+  .col-xs-22:nth-child(3) img {
+    margin-bottom: 0;
+  }
 }
 
 .fanpics-admin {
@@ -104,6 +120,43 @@
     display: inline-block;
   }
  }
+
+@include at-least($phone-wide) {
+ 
+  .fanpics-prototyping {
+
+    .row {
+
+      video {
+        width: 50%; 
+        margin: 0 auto;
+        margin-bottom: rem($baseline);   
+      }
+    }
+  }
+}
+
+@include at-least($tablet) {
+ 
+  .fanpics-prototyping {
+
+    .row {
+
+      video {
+        width: 100%;
+        margin-bottom: 0;   
+      }
+    }
+  }
+
+  .fanpics-posters {
+
+    .col-xs-22 img {
+      margin-bottom: 0;
+    }
+  }
+}
+
 
 @include at-least($medium-screen) {
 

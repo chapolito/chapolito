@@ -38,6 +38,18 @@
   }
 }
 
+.spritzr-date-icons {
+  width: 100%;
+
+  [class^='col-'], [class*='col-'] {
+    margin-bottom: rem($baseline);
+  }
+}
+
+.spritzr-date-icons-caption {
+  margin-top: 0;
+}
+
 .spritzr-case-study h1, .spritzr-case-study.hero h2 {
   color: $spritzrWhite1;
   text-shadow: 0px 2px 0px rgba($spritzrLapis3, 0.1);
