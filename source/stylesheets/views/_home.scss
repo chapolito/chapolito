@@ -9,11 +9,15 @@
 }
 
 .hero {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
 
   h2 {
     line-height: rem($baseline * 2);
     margin-bottom: 0;
-    margin-top: rem($baseline * 8);
+    margin-top: rem($baseline * 2);
   }
 
   .work-description {
@@ -27,4 +31,71 @@
 
 .work-description {
   font-style: italic;
+}
+
+
+@include at-least($phone-wide) {
+
+  .hero {
+    background-size: 120% auto;
+    background-position: left center;
+    text-align: left;
+
+    // h2 {
+    //   margin-top: rem($baseline * 2);
+    // }
+
+    h4 {
+      margin-bottom: rem($baseline * 2);
+    }
+
+    .col-xs-22 {     
+      flex-basis: 30.76923%;
+      max-width: 30.76923%;
+    }
+  }
+}
+
+@include at-least($tablet) {
+
+  .hero {
+    background-size: 100% auto;
+    background-position: center center;
+
+    h2 {
+      margin-top: rem($baseline * 4);
+    }
+
+    h4 {
+      margin-bottom: rem($baseline * 4);
+    }
+  }
+}
+
+@include at-least($medium-screen) {
+
+  .hero {
+
+    h2 {
+      margin-top: rem($baseline * 6);
+    }
+
+    h4 {
+      margin-bottom: rem($baseline * 6);
+    }
+  }
+}
+
+@include at-least($large-screen) {
+
+  .hero {
+
+    h2 {
+      margin-top: rem($baseline * 8);
+    }
+
+    h4 {
+      margin-bottom: rem($baseline * 8);
+    }
+  }
 }

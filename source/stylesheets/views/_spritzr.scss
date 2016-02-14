@@ -1,4 +1,9 @@
 
+body.spritzr {
+  @include background-image(none);
+  background-color: $spritzrWhite1;
+}
+
 .spritzr-case-study {
   @extend .case-study;
 
@@ -36,6 +41,11 @@
       padding: 0 22px;
     }
   }
+}
+
+.spritzr-case-study.hero {
+  background-color: $spritzrLapis2;
+  background-image: url('/images/spritzr/spritzr-cover-mobile.jpg');
 }
 
 .spritzr-date-icons {
@@ -101,3 +111,9 @@
   @extend .spritzr-blue-section;
 }
 
+@include at-least($phone-wide) {
+ 
+  .spritzr-case-study.hero {
+    background-image: url('/images/spritzr/spritzr-cover.jpg');
+  }
+}
