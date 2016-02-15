@@ -1,7 +1,7 @@
 .job-title {
   color: $linkOrange;
   text-shadow: 0.5px 1px 0px rgba(255, 255, 255, 1), 1.5px 3px 0px rgba(44, 248, 255, 1);
-  margin-bottom: rem($baseline * 7.5);
+  margin: rem($baseline * 0.5) 0 rem($baseline * 2.5) 0;
 
   .amp {
     color: $linkOrange_hover;
@@ -25,9 +25,39 @@
   }
 
   h4 {
+    
     margin-bottom: rem($baseline * 8);
+
+    &:after {
+      @include transition(all 300ms ease-in);
+      @include opacity(0);
+      @include transform(translateX(0));
+      content: ' ';
+      width: 16px;
+      height: 14px;
+      display: inline-block;
+    }
+
+    &:hover:after { 
+      @include opacity(1);
+      @include transform(translateX(10px));
+    }
   }
+
+  &.fanpics-case-study h4:after {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS44MyAxMy44NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmYWZkZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5mYW5waWNzLWFycm93PC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iOC45MSAwIDcuMDMgMS44OCAxMC43NCA1LjU5IDAgNS41OSAwIDguMjUgMTAuNzQgOC4yNSA3LjAzIDExLjk2IDguOTEgMTMuODQgMTUuODMgNi45MiA4LjkxIDAiLz48L3N2Zz4=);
+  }
+
+  &.spritzr-case-study h4:after {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS44MyAxMy44NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmZmM0NjY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5zcHJpdHpyLWFycnB3PC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iOC45MSAwIDcuMDMgMS44OCAxMC43NCA1LjU5IDAgNS41OSAwIDguMjUgMTAuNzQgOC4yNSA3LjAzIDExLjk2IDguOTEgMTMuODQgMTUuODMgNi45MiA4LjkxIDAiLz48L3N2Zz4=);
+  }
+  
+  &.the-wiki-game-case-study h4:after {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS44MyAxMy44NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMzOTkwZDg7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT50aGUtd2lraS1nYW1lLWFycm93PC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iOC45MSAwIDcuMDMgMS44OCAxMC43NCA1LjU5IDAgNS41OSAwIDguMjUgMTAuNzQgOC4yNSA3LjAzIDExLjk2IDguOTEgMTMuODQgMTUuODMgNi45MiA4LjkxIDAiLz48L3N2Zz4=);
+  } 
 }
+
+
 
 .work-description {
   font-style: italic;
@@ -36,14 +66,14 @@
 
 @include at-least($phone-wide) {
 
+  .job-title {
+    margin: rem($baseline * 1.5) 0 rem($baseline * 3.5) 0;
+  }
+
   .hero {
     background-size: 120% auto;
     background-position: left center;
     text-align: left;
-
-    // h2 {
-    //   margin-top: rem($baseline * 2);
-    // }
 
     h4 {
       margin-bottom: rem($baseline * 2);
@@ -57,6 +87,10 @@
 }
 
 @include at-least($tablet) {
+
+  .job-title {
+    margin: rem($baseline * 2.5) 0 rem($baseline * 6.5) 0;
+  }
 
   .hero {
     background-size: 100% auto;
@@ -87,6 +121,10 @@
 }
 
 @include at-least($large-screen) {
+
+  .job-title {
+    margin: rem($baseline * 3.5) 0 rem($baseline * 7.5) 0;
+  }
 
   .hero {
 
