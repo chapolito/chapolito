@@ -70,6 +70,7 @@ $theWikiGameSand1: #eef0dd;
 // Global
 @import 'mixins';
 @import 'base';
+@import 'animate-into-view';
 @import 'ampersand';
 @import 'header';
 @import 'footer';
@@ -79,7 +80,7 @@ $theWikiGameSand1: #eef0dd;
 @import 'views/testimonials';
 @import 'views/about';
 @import 'views/contact';
-@import 'views/case_studies';
+@import 'views/case-studies';
 @import 'views/fanpics';
 @import 'views/spritzr';
 @import 'views/the-wiki-game';
