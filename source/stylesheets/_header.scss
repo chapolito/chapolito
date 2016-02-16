@@ -33,6 +33,20 @@
   }
 }
 
+@include at-least($phone-wide) {
+
+  .top-nav {
+
+    h4 {
+      display: inline-block;
+
+      &:first-of-type {
+        margin-right: rem($baseline);
+      }
+    }
+  }
+}
+
 @include at-least($tablet) {
 
   .top-nav {
@@ -40,14 +54,9 @@
     margin-bottom: 0;
 
     h4 {
-      display: inline-block;
       line-height: rem($baseline * 2);
       margin-top: rem($baseline * 3);
       margin-bottom: rem($baseline * 3);
-
-      &:first-of-type {
-        margin-right: rem($baseline);
-      }
     }
   }
 

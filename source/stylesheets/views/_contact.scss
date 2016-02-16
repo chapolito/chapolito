@@ -7,4 +7,18 @@
 	.email-address {
 		margin-top: 0;
 	}
+
+  p:not(.street-address) {
+    text-align: left;
+  }
+}
+
+@include at-least($tablet) {
+
+  .contact {
+
+    p:not(.street-address) {
+      text-align: center;
+    }
+  }
 }
