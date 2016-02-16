@@ -5,6 +5,7 @@
 
   .amp {
     color: $linkOrange_hover;
+    transform: scale(1.5);
   }
 }
 
@@ -24,7 +25,7 @@
     margin-bottom: rem($baseline);
   }
 
-  h4 {
+  h5 {
     
     margin-bottom: rem($baseline * 8);
 
@@ -44,15 +45,15 @@
     }
   }
 
-  &.fanpics-case-study h4:after {
+  &.fanpics-case-study h5:after {
     background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS44MyAxMy44NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmYWZkZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5mYW5waWNzLWFycm93PC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iOC45MSAwIDcuMDMgMS44OCAxMC43NCA1LjU5IDAgNS41OSAwIDguMjUgMTAuNzQgOC4yNSA3LjAzIDExLjk2IDguOTEgMTMuODQgMTUuODMgNi45MiA4LjkxIDAiLz48L3N2Zz4=);
   }
 
-  &.spritzr-case-study h4:after {
+  &.spritzr-case-study h5:after {
     background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS44MyAxMy44NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmZmM0NjY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5zcHJpdHpyLWFycnB3PC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iOC45MSAwIDcuMDMgMS44OCAxMC43NCA1LjU5IDAgNS41OSAwIDguMjUgMTAuNzQgOC4yNSA3LjAzIDExLjk2IDguOTEgMTMuODQgMTUuODMgNi45MiA4LjkxIDAiLz48L3N2Zz4=);
   }
   
-  &.the-wiki-game-case-study h4:after {
+  &.the-wiki-game-case-study h5:after {
     background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS44MyAxMy44NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMzOTkwZDg7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT50aGUtd2lraS1nYW1lLWFycm93PC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iOC45MSAwIDcuMDMgMS44OCAxMC43NCA1LjU5IDAgNS41OSAwIDguMjUgMTAuNzQgOC4yNSA3LjAzIDExLjk2IDguOTEgMTMuODQgMTUuODMgNi45MiA4LjkxIDAiLz48L3N2Zz4=);
   } 
 }
@@ -72,7 +73,7 @@
     background-position: left center;
     text-align: left;
 
-    h4 {
+    h5 {
       margin-bottom: rem($baseline * 2);
     }
 
@@ -97,7 +98,7 @@
       margin-top: rem($baseline * 4);
     }
 
-    h4 {
+    h5 {
       margin-bottom: rem($baseline * 4);
     }
   }
@@ -111,7 +112,7 @@
       margin-top: rem($baseline * 6);
     }
 
-    h4 {
+    h5 {
       margin-bottom: rem($baseline * 6);
     }
   }
@@ -129,7 +130,7 @@
       margin-top: rem($baseline * 8);
     }
 
-    h4 {
+    h5 {
       margin-bottom: rem($baseline * 8);
     }
   }

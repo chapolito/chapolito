@@ -1,25 +1,4 @@
 
-// @include keyframes(dropping) {
-//   from {
-//     text-shadow: 0.5px 1px 0px rgba(255, 255, 255, 1), 1.5px 3px 0px rgba(44, 248, 255, 1);
-//   }
-//   to {
-//     text-shadow: 10px 20px 0px rgba(255, 255, 255, 0), 30px 60px 0px rgba(44, 248, 255, 0);
-//   }
-// }
-
-// @-webkit-keyframes dropping {
-//   from {
-//     text-shadow: 0.5px 1px 0px white, 1.5px 3px 0px #2cf8ff; }
-//   to {
-//     text-shadow: 1.5px 2px 0px rgba(255, 255, 255, 1), 2.5px 4px 0px rgba(44, 248, 255, 1); 
-//   } 
-// }
-
-// header {
-//   height: rem($baseline * 8);
-// }
-
 .logo {
 
   img {
@@ -48,7 +27,6 @@
   }
 
   .is-active a, a:hover {
-    //@include animation(alternate dropping 500ms ease-out infinite);
     @include opacity(1);
     color: $linkOrange;
     text-shadow: 0.5px 1px 0px rgba(255, 255, 255, 1), 1.5px 3px 0px rgba(44, 248, 255, 1);

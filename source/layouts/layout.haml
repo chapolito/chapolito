@@ -16,7 +16,8 @@
 
     %header.row
       .logo.col-xs-offset-2.col-xs-22.col-sm-offset-2.col-sm-6
-        = image_tag 'chapolito-logo.svg'
+        = link_to '/' do
+          = image_tag 'chapolito-logo.svg'
       %nav.top-nav.col-xs-offset-2.col-xs-22.col-sm-offset-2.col-sm-14
         %h4{ is_page_active('/') }
           = link_to 'Portfolio', '/'
@@ -60,7 +61,9 @@
           = link_to 'https://dribbble.com/chapolito' do
             = image_tag 'social/social-link-dribbble.svg'
         %p.small
-          The portfolio of San Diego, California based Creative Director &amp; Designer Jesse Chapo. 
+          The portfolio of San Diego, California based Creative Director 
+          %span.amp &amp; 
+          Designer Jesse Chapo. 
         %p.x-small
           Copyright &copy; 2007&ndash;2016 Jesse Chapo. All Rights Reserved.
         = link_to 'sitemap', '/', class: 'x-small'
