@@ -8,7 +8,6 @@ $(function(){
     
     animated.each(function(i) {
       x = $(this).offset().top + 40;
-      console.log(x);
       if (x < y) $(this).addClass('fadeInUp');
     });   
   });

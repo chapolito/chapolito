@@ -18,9 +18,9 @@
       .logo.col-xs-offset-2.col-xs-22.col-sm-offset-2.col-sm-6
         = image_tag 'chapolito-logo.svg'
       %nav.top-nav.col-xs-offset-2.col-xs-22.col-sm-offset-2.col-sm-14
-        %h3{ is_page_active('/') }
+        %h4{ is_page_active('/') }
           = link_to 'Portfolio', '/'
-        %h3{ is_page_active('/about/') }
+        %h4{ is_page_active('/about/') }
           = link_to 'About', '/about'
 
     = yield 

@@ -48,7 +48,7 @@
     color: $linkOrange_hover;
     position: absolute;
     right: -18px;
-    bottom: $baseline * 2;
+    bottom: rem($baseline * 2);
     font-size: rem(260px);
     line-height: rem($baseline);
     z-index: -1;

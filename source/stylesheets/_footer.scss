@@ -43,7 +43,7 @@ footer {
 
   img {
     display: block;
-    height: $baseline * 2;
+    height: rem($baseline * 2);
     margin-left: -12px;
   }
 }
@@ -91,17 +91,17 @@ footer {
 }
 
 .social-links {
-  margin-bottom: $baseline;
-  height: $baseline;
+  margin-bottom: rem($baseline);
+  height: rem($baseline);
 
   a {
-    margin-right: $baseline / 2;
+    margin-right: rem($baseline / 2);
     text-decoration: none;
-    height: $baseline;
+    height: rem($baseline);
     display: inline-block;
 
     img {
-      height: $baseline;
+      height: rem($baseline);
     }
   }
 }
@@ -126,7 +126,7 @@ footer {
   .social-links {
 
     a {
-      margin-right: $baseline / 4;
+      margin-right: rem($baseline / 4);
     }
   }
 }
@@ -136,7 +136,7 @@ footer {
   .social-links {
 
     a {
-      margin-right: $baseline / 2;
+      margin-right: rem($baseline / 2);
     }
   }
 }
