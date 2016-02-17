@@ -3,9 +3,10 @@
 ###
 
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+# more details: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+compass_config do |config|
+  config.output_style = :compressed
+end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -23,6 +24,9 @@
 # with_layout :admin do
 #   page "/admin/*"
 # end
+
+page '/free-design-resources/posts/*', :layout => :post_layout
+
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
