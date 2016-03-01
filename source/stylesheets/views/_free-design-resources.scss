@@ -12,12 +12,18 @@
   }
 }
 
+.back-to-free-design-resources {
+  margin-top: rem($baseline * 2);
+  display: block;
+}
+
 article {
 
   h1 {
     text-transform: none;
     letter-spacing: normal;
     margin-bottom: rem($baseline * 2.5);
+    margin-top: rem($baseline * 1.5);
   }
 
   h6 {

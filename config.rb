@@ -41,6 +41,7 @@ activate :blog do |blog|
   blog.name = 'free-design-resources'
   blog.prefix = 'free-design-resources'
   blog.layout = 'post_layout'
+  blog.permalink = '{title}.html'
 end
 
 
