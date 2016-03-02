@@ -11,6 +11,7 @@ body {
   @include background-image(linear-gradient($lightCyan 0, $coolWhite 400px));
   background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: 'Alegreya', serif;
   font-size: 100%;
   line-height: rem($baseline);
