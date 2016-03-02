@@ -4,6 +4,10 @@ body.the-wiki-game {
   background-color: $theWikiGameSand0;
 }
 
+.the-wiki-game-img-dropshadow {
+  box-shadow: 0px 4px 40px 0px rgba($darkSlate, 0.3);
+}
+
 .the-wiki-game-pattern {
   background-color: $theWikiGameSand1;
   background-image: url('/images/the-wiki-game/the-wiki-game-pattern.jpg');
@@ -76,6 +80,10 @@ body.the-wiki-game {
 
 .the-wiki-web-app-designs {
 
+  img {
+    @extend .the-wiki-game-img-dropshadow;
+  }
+  
   .row {
     background-color: $theWikiGameSand1;
     padding-top: rem($baseline * 4);

@@ -4,6 +4,10 @@ body.spritzr {
   background-color: $spritzrWhite1;
 }
 
+.spritzr-img-dropshadow {
+  box-shadow: 0px 4px 40px 0px rgba($darkSlate, 0.3);
+}
+
 .spritzr-case-study {
   @extend .case-study;
 
@@ -95,6 +99,10 @@ body.spritzr {
 .spritzr-web-designs {
   @extend .spritzr-blue-section;
   padding-top: rem($baseline * 4);
+
+  img {
+    @extend .spritzr-img-dropshadow;
+  }
 }
 
 .spritzr-animations {
@@ -102,6 +110,10 @@ body.spritzr {
   .row {
     background-color: $spritzrWhite2;
     padding-top: rem($baseline * 4);
+  }
+
+  video {
+    @extend .spritzr-img-dropshadow;
   }
 }
 
