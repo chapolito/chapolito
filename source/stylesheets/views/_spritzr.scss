@@ -46,6 +46,13 @@ body.spritzr {
   }
 }
 
+// Fix for Mozilla not making line height block level
+@-moz-document url-prefix() { 
+  .spritzr-case-study p.intro:first-letter {
+    padding: 16px 22px;
+  }
+}
+
 .spritzr-case-study.hero {
   background-color: $spritzrLapis2;
   background-image: url('/images/spritzr/spritzr-cover-mobile.jpg');

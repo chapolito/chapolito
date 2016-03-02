@@ -122,6 +122,7 @@ p {
   }
 }
 
+// Fix for Mozilla not making line height block level
 @-moz-document url-prefix() { 
   p.intro:first-letter {
     padding: 16px;
