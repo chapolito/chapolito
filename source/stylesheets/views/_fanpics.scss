@@ -10,7 +10,7 @@ body.fanpics {
 }
 
 .fanpics-stripe-pattern {
-  background-color: $fanpicsAzure1;
+  background-color: $fanpicsStripePatternBG;
   background-image: url('/images/fanpics/fanpics-pattern.svg');
   background-repeat: repeat-y;
   background-size: 100% auto;;
@@ -84,7 +84,7 @@ body.fanpics {
 .fanpics-prototyping {
 
   .row {
-    background-color: $fanpicsGreen1;
+    background-color: $fanpicsSlate2;
     padding: rem($baseline * 4) 0;
 
     video {
