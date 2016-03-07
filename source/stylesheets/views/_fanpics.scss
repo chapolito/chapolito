@@ -20,11 +20,6 @@ body.fanpics {
   }
 }
 
-.fanpics-case-study h1, .fanpics-case-study.hero h2 {
-  color: $fanpicsSlate0;
-  text-shadow: 0px 2px 0px rgba($fanpicsAzure3, 0.1);
-}
-
 .fanpics-case-study.hero {
   background-color: #2eabeb;
   background-image: url('/images/fanpics/fanpics-cover-mobile.jpg');
@@ -37,6 +32,11 @@ body.fanpics {
   .work-description {
     color: $fanpicsSlate7;
     text-shadow: 0px 1px 0px rgba($fanpicsAzure1, 1);
+  }
+
+  h1, &.hero h2 {
+    color: $fanpicsSlate0;
+    text-shadow: 0px 2px 0px rgba($fanpicsAzure3, 0.1);
   }
 
   h1 {

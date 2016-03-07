@@ -21,11 +21,6 @@ body.the-wiki-game {
   background-position: top center;
 }
 
-.the-wiki-game-case-study h1, .the-wiki-game.hero h2 {
-  color: $theWikiGameBrown4;
-  text-shadow: 0px 2px 0px rgba($theWikiGameBrown4, 0.1);
-}
-
 .the-wiki-game-case-study.hero {
   background-color: $theWikiGameSand1;
   background-image: url('/images/the-wiki-game/the-wiki-game-cover-mobile.jpg');
@@ -38,6 +33,10 @@ body.the-wiki-game {
   .work-description {
     color: $theWikiGameBrown2;
     text-shadow: 0px 1px 0px rgba($theWikiGameSand1, 1);
+  }
+
+  h1, &.hero h2 {
+    color: $theWikiGameBrown4;
   }
 
   h1 {

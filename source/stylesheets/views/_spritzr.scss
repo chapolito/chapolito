@@ -11,6 +11,11 @@ body.spritzr {
 .spritzr-case-study {
   @extend .case-study;
 
+  h1, &.hero h2 {
+    color: $spritzrWhite1;
+    text-shadow: 0px 2px 0px rgba($spritzrLapis3, 0.1);
+  }
+
   h1 {
     
     &:after {
@@ -67,11 +72,6 @@ body.spritzr {
 
 .spritzr-date-icons-caption {
   margin-top: 0;
-}
-
-.spritzr-case-study h1, .spritzr-case-study.hero h2 {
-  color: $spritzrWhite1;
-  text-shadow: 0px 2px 0px rgba($spritzrLapis3, 0.1);
 }
 
 .spritzr-blue-section {
