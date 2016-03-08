@@ -55,12 +55,12 @@ body.fanpics {
     }
   }
 
-  a {
+  a, h5 {
     color: $fanpicsSlate2;
+  }
 
-    &:hover {
-      color: $fanpicsSlate0;
-    }
+  a:hover {
+    color: $fanpicsSlate0;
   }
 }
 

@@ -10,6 +10,7 @@
 }
 
 .hero {
+  @include transition(all 200ms ease-in);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -26,22 +27,17 @@
   }
 
   h5 {
-    
+    @include transform(translate3d(0,0,0));
+    text-decoration: underline;
     margin-bottom: rem($baseline * 8);
 
     &:after {
       @include transition(all 300ms ease-in);
-      @include opacity(0);
-      @include transform(translateX(0));
+      @include transform(translateX(10px));
       content: ' ';
       width: 16px;
       height: 14px;
       display: inline-block;
-    }
-
-    &:hover:after { 
-      @include opacity(1);
-      @include transform(translateX(10px));
     }
   }
 
@@ -56,6 +52,68 @@
   &.the-wiki-game-case-study h5:after {
     background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS44MyAxMy44NCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMzOTkwZDg7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT50aGUtd2lraS1nYW1lLWFycm93PC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iOC45MSAwIDcuMDMgMS44OCAxMC43NCA1LjU5IDAgNS41OSAwIDguMjUgMTAuNzQgOC4yNSA3LjAzIDExLjk2IDguOTEgMTMuODQgMTUuODMgNi45MiA4LjkxIDAiLz48L3N2Zz4=);
   } 
+}
+
+@keyframes bob-right {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+
+@-moz-keyframes bob-right {
+  from {
+    -moz-transform: translateX(10px);
+  }
+  to {
+    -moz-transform: translateX(20px);
+  }
+}
+
+@-webkit-keyframes bob-right {
+  from {
+    -webkit-transform: translateX(10px);
+  }
+  to {
+    -webkit-transform: translateX(20px);
+  }
+}
+
+@-o-keyframes bob-right {
+  from {
+    -o-transform: translateX(10px);
+  }
+  to {
+    -o-transform: translateX(20px);
+  }
+}
+
+.index {
+  overflow-x: hidden;
+
+  & > a {
+    text-decoration: none;
+
+    &:hover .hero {
+      @include box-shadow(0 0 50px rgba($darkSlate, 0.4)); 
+      @include transform(scale(1));
+      padding: 2px 0;
+      margin: -2px 0;
+
+      h5 {
+        @include opacity(1);
+        @include transform(translateX(0));
+
+        &:after {
+          @include animation(alternate bob-right 0.8s infinite);
+          @include opacity(1);
+          @include transform(translateX(10px));
+        }
+      }
+    }
+  }
 }
 
 .work-description {
@@ -100,6 +158,10 @@
 
     h5 {
       margin-bottom: rem($baseline * 4);
+
+      &:after {
+        @include opacity(0);
+      }
     }
   }
 }
@@ -113,6 +175,9 @@
     }
 
     h5 {
+      @include transition(all 200ms ease-in);
+      @include opacity(0);
+      @include transform(translateX(-10px));
       margin-bottom: rem($baseline * 6);
     }
   }

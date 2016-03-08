@@ -32,12 +32,12 @@ body.spritzr {
     text-shadow: 0px 1px 0px rgba($spritzrLapis1, 1);
   }
 
-  a {
+  a, h5 {
     color: $spritzrLink;
+  }
 
-    &:hover {
-      color: lighten($spritzrLink, 5%);
-    }
+  a:hover {
+    color: lighten($spritzrLink, 5%);
   }
 
   p {

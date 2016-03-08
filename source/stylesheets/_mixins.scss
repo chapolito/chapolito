@@ -16,7 +16,7 @@ $fixed-container: 1165px;
   }
 }
 
-@mixin animation($str) {
+@mixin animation($str...) {
   -webkit-animation: #{$str}; /* Safari 4+ */
   -moz-animation: #{$str};  /* Fx 5+ */
   -o-animation: #{$str};    /* Opera 12+ */

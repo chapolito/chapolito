@@ -55,12 +55,12 @@ body.the-wiki-game {
     }
   }
 
-  a {
+  a, h5 {
     color: $theWikiGameBlue2;
+  }
 
-    &:hover {
-      color: lighten($theWikiGameBlue2, 5%);
-    }
+  a:hover {
+    color: lighten($theWikiGameBlue2, 5%);
   }
 }
 
