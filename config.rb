@@ -80,6 +80,7 @@ set :partials_dir, 'partials'
 
 # Build-specific configuration
 configure :build do
+  
   # For example, change the Compass output style for deployment
   activate :minify_css
 
@@ -87,7 +88,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   # activate :relative_assets
