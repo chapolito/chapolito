@@ -27,14 +27,18 @@
 
 @include at-least($phone-wide) {
 
-  h1 {
-    margin-top:  rem($baseline * 2.5); 
+  .case-study {
+    h1 {
+      margin-top:  rem($baseline * 2.5); 
+    }
   }
 }
 
 @include at-least($tablet) {
 
-  h1 {
-    margin-top:  rem($baseline * 3.5); 
+  .case-study {
+    h1 {
+      margin-top:  rem($baseline * 3.5); 
+    }
   }
 }

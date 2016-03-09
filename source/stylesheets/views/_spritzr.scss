@@ -29,7 +29,6 @@ body.spritzr {
 
   .work-description {
     color: $spritzrLapis3;
-    text-shadow: 0px 1px 0px rgba($spritzrLapis1, 1);
   }
 
   a, h5 {
@@ -76,7 +75,8 @@ body.spritzr {
 
 .spritzr-blue-section {
   background-color: $spritzrLapis2;
-  
+  @include background-image(radial-gradient(50% 25%, circle closest-corner, #24a7f2 0%, #2484f2 100%));
+
   p {
     color: $spritzrWhite2;
   }
@@ -84,15 +84,6 @@ body.spritzr {
   h3, .caption {
     color: $spritzrWhite1;
   }
-}
-
-.spritzr-corner-graphic {
-  @extend .spritzr-blue-section;
-  background-color: $spritzrLapis2;
-  background-image: url('/images/spritzr/spritzr-corner-graphic.jpg');
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: contain;
 }
 
 .spritzr-wireframes {
