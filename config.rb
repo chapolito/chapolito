@@ -66,6 +66,12 @@ end
 
 helpers do
   def is_page_active(page)
+
+    # Highlight the Portfolio nav links for case studies
+    if ['/spritzr/', '/fanpics/', '/the-wiki-game/'].include?(current_page.url) and page == '/'
+      return {:class => 'is-active'}
+    end
+
     current_page.url == page ? {:class => 'is-active'} : {}
   end
 end
@@ -80,7 +86,7 @@ set :partials_dir, 'partials'
 
 # Build-specific configuration
 configure :build do
-  
+
   # For example, change the Compass output style for deployment
   activate :minify_css
 
