@@ -2,71 +2,103 @@
 .logo {
 
   img {
-    height: rem($baseline * 2);
+    height: rem($baseline * 1.5);
     margin: rem($baseline) auto;
     display: block;
-    @include transform(translateX(-12px));
+    @include transform(translateX(-9px));
   }
 }
 
 .top-nav {
   text-align: center;
-  margin-bottom: rem($baseline * 2);
+  margin-bottom: rem($baseline * 0.5);
 
-  h4 {
-    line-height: rem($baseline);
+  h5 {
     margin-top: 0;
     margin-bottom: 0;
+    display: inline-block;
+
+    &:first-of-type {
+      margin-right: rem($baseline);
+    }
   }
 
   a {
     @include transition(color 150ms ease-out, opacity 150ms ease-out, text-shadow 150ms ease-out);
-    @include opacity(0.6);
+    @include opacity(0.5);
     color: $darkSlate;
     text-decoration: none;
+    line-height: rem($baseline * 2);
+    display: block;
+    position: relative;
+    
+    &:after {
+      @include transition(all 300ms ease-out);
+      @include opacity(0);
+      @include transform(translateY(10px));
+      content: "";
+      display: block;
+      border-bottom: 1px solid rgba($linkOrange_hover, 0.4);
+      border-top: 1px solid rgba($linkOrange_hover, 1);
+      height: 0;
+      position: absolute;
+      bottom: 0;
+      width: 40%;
+      margin-left: 30%;
+    }  
   }
 
   .is-active a, a:hover {
     @include opacity(1);
-    color: $linkOrange;
-    text-shadow: 0.5px 1px 0px rgba(255, 255, 255, 1), 1.5px 3px 0px rgba(44, 248, 255, 1);
+
+    &:after {
+      @include opacity(1);
+      height: 2px;
+      @include transform(translateY(0));
+      width: 80%;
+      margin-left: 10%;
+    }  
   }
 }
 
+
 @include at-least($phone-wide) {
+
+  
 
   .top-nav {
 
-    h4 {
-      display: inline-block;
+    h5 {
+      //display: inline-block;
 
-      &:first-of-type {
-        margin-right: rem($baseline);
-      }
+      
     }
   }
 }
 
 @include at-least($tablet) {
 
-  .top-nav {
-    text-align: right;
-    margin-bottom: 0;
-
-    h4 {
-      line-height: rem($baseline * 2);
-      margin-top: rem($baseline * 3);
-      margin-bottom: rem($baseline * 3);
-    }
-  }
-
   .logo {
     text-align: left;
 
     img {
+      height: rem($baseline * 2);
+      display: block;
+      @include transform(translateX(-12px));
       margin-left: -12px;
-      margin-top: rem($baseline * 3);
-      margin-bottom: rem($baseline * 3);
+      margin-top: rem($baseline * 2.5);
+      margin-bottom: rem($baseline * 2.5);
+    }
+  }
+
+  .top-nav {
+    text-align: right;
+    margin-bottom: 0;
+
+    h5 {
+      margin-top: rem($baseline * 2.5);
+      margin-bottom: rem($baseline * 2.5);
     }
   }
 }
+

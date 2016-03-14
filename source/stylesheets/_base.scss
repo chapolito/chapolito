@@ -1,4 +1,8 @@
 
+// Grid Variables
+$baseline: 28px;
+$baseFontSize: 16px;
+
 html, body {
   padding: 0;
   margin: 0;
@@ -17,19 +21,19 @@ body {
   line-height: rem($baseline);
   font-weight: 400;
   color: $darkSlate;
-  //background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Proxima Nova', Gotham, 'Arial Black', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.2em;
+  margin-right: -0.2em;
   margin-top: 0;
 }
 
 // Type Scale
-// Scale is 1:2 with an interval of 4
+// scale is 1:2 with an interval of 4
 $h1: 36px;    // 18px * 2^(4/4)
 $h2: 30.27px; // 18px * 2^(3/4)
 $h3: 25.46px; // 18px * 2^(2/4)
@@ -42,15 +46,16 @@ h1 {
   font-size:  rem($h1);
   line-height: rem($baseline * 2); 
   margin-top:  0; 
-  margin-bottom: rem($baseline * 1.5); 
+  margin-bottom: rem($baseline * 1.5);
 
-  &:not(.job-title):after {
+  &:not(.intro-paragraph):after {
     content: ' ';
     display: block;
-    width: 150px;
+    width: 130px;
     border-bottom: 2px solid $linkOrange;
     margin: 0 auto;
     margin-bottom: -2px;
+    @include transform(translateX(-0.1em));
   }
 }
 
@@ -105,7 +110,7 @@ p {
     padding: 0 16px; 
     margin-right: 14px;
     margin-top: 4px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Proxima Nova', Gotham, 'Arial Black', sans-serif;
   }
 
   a {
@@ -156,6 +161,13 @@ a::-moz-selection {
   background: $linkOrange_hover;
   text-shadow: none;
   color: $coolWhite;
+}
+
+abbr {
+  text-transform: lowercase;
+  font-family: 'Alegreya SC';
+  letter-spacing: 0.05em;
+  margin-right: -0.05em;
 }
 
 .row .row {

@@ -1,12 +1,22 @@
-.job-title {
-  color: $linkOrange;
-  text-shadow: 0.5px 1px 0px rgba(255, 255, 255, 1), 1.5px 3px 0px rgba(44, 248, 255, 1);
-  margin: rem($baseline * 0.5) 0 rem($baseline * 2.5) 0;
+.intro-paragraph {
+  line-height: rem($baseline);
+  margin: rem($baseline * 2) 0 rem($baseline * 3) 0;
 
-  .amp {
-    color: $linkOrange_hover;
-    text-shadow: 0.333px 0.667px 0px rgba(255, 255, 255, 1), 1px 2px 0px rgba(44, 248, 255, 1);
-    transform: scale(1.5);
+  div:not(.job-title) {
+    font-family: Alegreya, georgia, serif;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-size: $h4;
+  }
+
+  em.hello, .job-title {
+    color: $linkOrange;
+  }
+
+  .job-title {
+    line-height: rem($baseline * 2);
+    text-shadow:  1px 1px 0 rgba($coolWhite, 1), 1px 1px 0 rgba($coolWhite, 1), 0 1.5px 0 rgba($coolWhite, 1), 1.5px 0 0 rgba($coolWhite, 1), 1px 1px 0 rgba($coolWhite, 1),  3px 3px 0 rgba($turquoise, 0.7), 4.5px 4.5px 0 rgba($turquoise, 0.5), 6px 6px 0 rgba($turquoise, 0.4), 8px 8px 0 rgba($turquoise, 0.3), 10px 10px 0 rgba($turquoise, 0.2), 12px 12px 0 rgba($turquoise, 0.1),;
   }
 }
 
@@ -123,10 +133,6 @@
 
 @include at-least($phone-wide) {
 
-  .job-title {
-    margin: rem($baseline * 1.5) 0 rem($baseline * 3.5) 0;
-  }
-
   .hero {
     background-size: 120% auto;
     background-position: left center;
@@ -145,8 +151,8 @@
 
 @include at-least($tablet) {
 
-  .job-title {
-    margin: rem($baseline * 2.5) 0 rem($baseline * 6.5) 0;
+  .intro-paragraph {
+    margin: rem($baseline * 2) 0 rem($baseline * 5) 0;
   }
 
   .hero {
@@ -186,8 +192,8 @@
 
 @include at-least($large-screen) {
 
-  .job-title {
-    margin: rem($baseline * 3.5) 0 rem($baseline * 7.5) 0;
+  .intro-paragraph {
+    margin: rem($baseline * 3) 0 rem($baseline * 6) 0;
   }
 
   .hero {
