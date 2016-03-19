@@ -1,12 +1,40 @@
 
 header {
   @include box-shadow(10px 0 20px rgba($darkSlate, 0.1));
+  -webkit-animation: 250ms ease-in 150ms both animate-header-in;
   background-color: rgba($coolWhite, 0.9);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10000;
+
+  &.drop-in-header {
+    -webkit-animation: 250ms ease-in both animate-header-out;
+  }
 }
+
+@-webkit-keyframes animate-header-in {
+  from {
+    @include transform(translateY(-56px));
+    @include opacity(0);
+  }
+  to {
+    @include transform(translateY(0));
+    @include opacity(1);
+  }
+}
+
+@-webkit-keyframes animate-header-out {
+  from {
+    @include transform(translateY(0));
+    @include opacity(1);
+  }
+  to {
+    @include transform(translateY(-56px));
+    @include opacity(0);
+  }
+}
+
 
 .logo {
 
