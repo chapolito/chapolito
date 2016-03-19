@@ -39,12 +39,9 @@ footer {
 }
 
 .footer-logo {
-  margin-bottom: rem($baseline * 2);
-
+  
   img {
-    display: block;
-    height: rem($baseline * 2);
-    margin-left: -12px;
+    display: none;
   }
 }
 
@@ -118,6 +115,16 @@ footer {
 
   .colophon {
     margin-top: 0;
+  }
+
+  .footer-logo {
+    margin-bottom: rem($baseline * 2);
+
+    img {
+      display: block;
+      height: rem($baseline * 1.5);
+      margin-left: -9px;
+    }
   }
 }
 

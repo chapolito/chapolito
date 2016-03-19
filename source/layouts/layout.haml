@@ -17,13 +17,13 @@
   %body( class='#{page_classes}' )
 
     %header.row
-      .logo.col-xs-offset-2.col-xs-22.col-sm-offset-2.col-sm-6
+      .logo.col-xs-offset-1.col-xs-7.col-sm-offset-2.col-sm-6
         = link_to '/' do
           = image_tag 'chapolito-logo.svg'
-      %nav.top-nav.col-xs-offset-2.col-xs-22.col-sm-offset-2.col-sm-14
-        %h5{ is_page_active('/') }
+      %nav.top-nav.col-xs-17.col-sm-offset-2.col-sm-14
+        %h5.x-small{ is_page_active('/') }
           = link_to 'Portfolio', '/'
-        %h5{ is_page_active('/about/') }
+        %h5.x-small{ is_page_active('/about/') }
           = link_to 'About', '/about'
 
     = yield 

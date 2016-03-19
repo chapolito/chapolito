@@ -1,17 +1,25 @@
 
+header {
+  @include box-shadow(10px 0 20px rgba($darkSlate, 0.1));
+  background-color: rgba($coolWhite, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
 .logo {
 
   img {
-    height: rem($baseline * 1.5);
-    margin: rem($baseline) auto;
+    height: rem($baseline);
+    margin: rem($baseline * 0.5) 0 rem($baseline * 0.5) -6px;
     display: block;
-    @include transform(translateX(-9px));
+    text-align: left;
   }
 }
 
 .top-nav {
-  text-align: center;
-  margin-bottom: rem($baseline * 0.5);
+  text-align: right;
 
   h5 {
     margin-top: 0;
@@ -19,7 +27,7 @@
     display: inline-block;
 
     &:first-of-type {
-      margin-right: rem($baseline);
+      margin-right: rem($baseline * 0.5);
     }
   }
 
@@ -31,73 +39,66 @@
     line-height: rem($baseline * 2);
     display: block;
     position: relative;
+    margin-right: -0.2em;
     
     &:after {
       @include transition(all 300ms ease-out);
       @include opacity(0);
-      @include transform(translateY(10px));
-      content: "";
+      @include transform(translateY(0));
+      content: " ";
       display: block;
-      border-bottom: 1px solid rgba($linkOrange_hover, 0.4);
-      border-top: 1px solid rgba($linkOrange_hover, 1);
+      border-bottom: 2px solid rgba($linkOrange_hover, 0.4);
       height: 0;
       position: absolute;
       bottom: 0;
-      width: 40%;
-      margin-left: 30%;
-    }  
-  }
-
-  .is-active a, a:hover {
-    @include opacity(1);
-
-    &:after {
-      @include opacity(1);
-      height: 2px;
-      @include transform(translateY(0));
       width: 80%;
       margin-left: 10%;
     }  
+  }
+
+  .is-active a, .is-active a:after, a:hover, a:hover:after {
+    @include opacity(1);
+  }
+
+  a:hover:after, .is-active a:hover:after  {
+    @include transform(translateY(-5px));
   }
 }
 
 
 @include at-least($phone-wide) {
 
-  
-
-  .top-nav {
-
-    h5 {
-      //display: inline-block;
-
-      
-    }
-  }
 }
 
 @include at-least($tablet) {
 
+  header {
+    @include box-shadow(none);
+    background-color: transparent;
+    position: relative;
+  }
+
   .logo {
-    text-align: left;
 
     img {
-      height: rem($baseline * 2);
+      height: rem($baseline * 1.5);
       display: block;
-      @include transform(translateX(-12px));
-      margin-left: -12px;
-      margin-top: rem($baseline * 2.5);
-      margin-bottom: rem($baseline * 2.5);
+      margin-left: -9px;
+      margin-top: rem($baseline * 1.75);
+      margin-bottom: rem($baseline * 1.25);
     }
   }
 
   .top-nav {
-    text-align: right;
     margin-bottom: 0;
 
     h5 {
-      margin-top: rem($baseline * 2.5);
-      margin-bottom: rem($baseline * 2.5);
+      margin-top: rem($baseline * 1.5);
+      margin-bottom: rem($baseline * 1.5);
+
+      &:first-of-type {
+        margin-right: rem($baseline);
+      }
     }
   }
 }
