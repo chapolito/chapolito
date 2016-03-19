@@ -6,9 +6,10 @@
 
 	.email-address {
 		margin-top: 0;
+    margin-bottom: rem($baseline * 4);
 	}
 
-  p:not(.street-address) {
+  p {
     text-align: left;
   }
 }
@@ -17,7 +18,7 @@
 
   .contact {
 
-    p:not(.street-address) {
+    p {
       text-align: center;
     }
   }
