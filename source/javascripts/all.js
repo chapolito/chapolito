@@ -1,1 +1,2 @@
-//= require_tree .
+//= require animate-into-view
+//= require animate-header
