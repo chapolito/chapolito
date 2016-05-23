@@ -10,10 +10,19 @@ description: About Jesse Chapo and his past experience as a Product Designer as 
     .portrait.col-xs-offset-2.col-xs-22.col-sm-offset-2.col-sm-10
       = image_tag 'jesse-chapo-portrait.jpg'
     %p.intro
-      Hello! My name is Jesse Chapo and I'm the Lead Product Designer at 
+      Hello! My name is Jesse Chapo and I'm a Senior Product Designer at 
       = succeed '.' do
+        = link_to 'Life360', 'https://www.life360.com'
+      Previously, I designed at 
+      = succeed ',' do
         = link_to 'Fanpics', 'https://www.fanpics.com'
-      I've seen ample variety in my career&mdash;Fortune 500’s, agencies, and freelancing&mdash;but I especially love working at young, energetic startups. I'm unapologetically a design generalist and resolute that my ancillary proficiencies in front-end dev, illustration, etc. only strengthen, not distract, from my design work. 
+      = succeed ',' do
+        = link_to 'Spritzr', 'https://spritzr.com'
+      and
+      = succeed '.' do
+        = link_to 'The Wiki Game', 'http://thewikigame.com/'
+      I'm unapologetically a design generalist and resolute that my ancillary proficiencies in front-end dev, illustration, etc. only strengthen, not distract, from my design work. 
+
     %p
       I blog infrequently at 
       = link_to 'jessechapo.com', 'http://jessechapo.com' 
@@ -25,5 +34,7 @@ description: About Jesse Chapo and his past experience as a Product Designer as 
   
   - data.philosophy.each do |tenant|
     .col-xs-offset-2.col-xs-22.col-sm-10.col-md-6.col-lg-4.animated
-      %h5= tenant.title
+      %h5
+        = tenant.title
+        &nbsp;
       %span= tenant.principle
