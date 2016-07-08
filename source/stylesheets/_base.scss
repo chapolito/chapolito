@@ -12,19 +12,20 @@ html, body {
 
 body {
   background-color: $coolWhite;
-  @include background-image(linear-gradient($lightCyan 0, $coolWhite 400px));
-  background-repeat: no-repeat;
+  //@include background-image(linear-gradient($lightCyan 0, $coolWhite 400px));
+  //background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Alegreya', serif;
+  font-family: 'Karla', 'Alegreya', serif;
   font-size: 100%;
   line-height: rem($baseline);
   font-weight: 400;
-  color: $darkSlate;
+  color: $slate;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', 'Proxima Nova', Gotham, 'Arial Black', sans-serif;
+  color: $darkSlate;
+  font-family: 'Montserrat', 'Proxima Nova', 'Gotham', 'Arial Black', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -112,19 +113,20 @@ p {
     margin-top: 4px;
     font-family: 'Montserrat', 'Proxima Nova', Gotham, 'Arial Black', sans-serif;
   }
+}
 
-  a {
-    color: $bodyCopyColor;
-    text-decoration: none;
-    text-shadow: rem(1px) 0 0 $coolWhite, rem(2px) 0 0 $coolWhite, rem(3px) 0 0 $coolWhite, rem(-1px) 0 0 $coolWhite, rem(-2px) 0 0 $coolWhite, rem(-3px) 0 0 $coolWhite, 0 rem(1px) 0 $coolWhite, 0 rem(2px) 0 $coolWhite, 0 rem(-1px) 0 $coolWhite, 0 rem(-2px) 0 $coolWhite; 
-    @include background-image(linear-gradient($linkOrange, $linkOrange));
-    background-position: 0 1.2em;
-    background-size: 1px 1px;
-    background-repeat: repeat-x;
+// Special underlined footer with gaps for descenders
+p a, footer .contact-info a {
+  color: $bodyCopyColor;
+  text-decoration: none;
+  text-shadow: rem(1px) 0 0 $coolWhite, rem(2px) 0 0 $coolWhite, rem(3px) 0 0 $coolWhite, rem(-1px) 0 0 $coolWhite, rem(-2px) 0 0 $coolWhite, rem(-3px) 0 0 $coolWhite, 0 rem(1px) 0 $coolWhite, 0 rem(2px) 0 $coolWhite, 0 rem(-1px) 0 $coolWhite, 0 rem(-2px) 0 $coolWhite; 
+  @include background-image(linear-gradient($linkOrange, $linkOrange));
+  background-position: 0 1.05em;
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
 
-    &:hover {
-      color: $linkOrange;
-    }
+  &:hover {
+    color: $linkOrange;
   }
 }
 
@@ -163,12 +165,12 @@ a::-moz-selection {
   color: $coolWhite;
 }
 
-abbr {
-  text-transform: lowercase;
-  font-family: 'Alegreya SC';
-  letter-spacing: 0.05em;
-  margin-right: -0.05em;
-}
+// abbr {
+//   text-transform: lowercase;
+//   font-family: 'Alegreya SC';
+//   letter-spacing: 0.05em;
+//   margin-right: -0.05em;
+// }
 
 .row .row {
   width: 100%;

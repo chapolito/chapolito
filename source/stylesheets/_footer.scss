@@ -1,8 +1,9 @@
 
 footer {
-  background-color: $footerGradient2;
-  @include background-image(linear-gradient(to left top, $footerGradient1, $footerGradient2));
-  color: $coolWhite;
+  background-color: $coolWhite;
+  border-top: 1px solid #D6DCE4;
+  //@include background-image(linear-gradient(to left top, $footerGradient1, $footerGradient2));
+  //color: $coolWhite;
   padding-top: rem($baseline * 4);
   padding-bottom: rem($baseline * 4);
 
@@ -22,7 +23,7 @@ footer {
 
   a.x-small {
     @include opacity(0.3);
-    color: $coolWhite;
+    //color: $coolWhite;
 
     &:hover {
       @include opacity(0.4);
@@ -64,7 +65,7 @@ footer {
   }
 
   a, a:hover {
-    color: $coolWhite;
+    color: $darkSlate;
     text-decoration: none;
 
     &:after {
