@@ -163,7 +163,7 @@ header {
       @include transform(translateY(0));
       content: " ";
       display: block;
-      border-bottom: 2px solid rgba($linkOrange_hover, 0.4);
+      border-bottom: 2px solid $accent_yellow;
       height: 0;
       position: absolute;
       bottom: 0;

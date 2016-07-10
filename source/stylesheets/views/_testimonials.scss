@@ -9,6 +9,12 @@
     text-transform: none;
     letter-spacing: 0;
   }
+
+  h6 {
+    font-family: 'Karla', 'Alegreya', serif;
+    text-transform: none;
+    letter-spacing: normal;
+  }
 }
 
 .testimonial {
@@ -18,12 +24,12 @@
 
 .testimonial:first-of-type {
   display: none;
-  background-color: $linkOrange;
+  background-color: $link;
   padding: rem($baseline) rem($baseline * 1.5);
   margin-bottom: rem($baseline * 2);
   position: relative;
-  font-family: 'Montserrat', sans-serif;
   z-index: -1;
+  font-family: 'Montserrat', sans-serif;
 
   p {
     font-size:  rem($h1);
@@ -41,11 +47,12 @@
 
   h6 {
     z-index: 1;
+    font-family: 'Karla', 'Alegreya', serif;
   }
 
   &:after {
     content: "”";
-    color: $linkOrange_hover;
+    color: $accent_yellow;
     position: absolute;
     right: -18px;
     bottom: rem($baseline * 2);

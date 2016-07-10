@@ -2,8 +2,6 @@
 footer {
   background-color: $coolWhite;
   border-top: 1px solid #D6DCE4;
-  //@include background-image(linear-gradient(to left top, $footerGradient1, $footerGradient2));
-  //color: $coolWhite;
   padding-top: rem($baseline * 4);
   padding-bottom: rem($baseline * 4);
 
@@ -23,7 +21,6 @@ footer {
 
   a.x-small {
     @include opacity(0.3);
-    //color: $coolWhite;
 
     &:hover {
       @include opacity(0.4);
@@ -37,6 +34,10 @@ footer {
   .mail-address {
     margin: rem($baseline) 0 0 0;
   }
+}
+
+body.index footer {
+  border-top: none;
 }
 
 .footer-logo {
@@ -73,9 +74,9 @@ footer {
       @include opacity(0);
       content: ' ';
       display: block;
-      border-bottom: 1px solid $linkOrange;
+      border-bottom: 2px solid $accent_yellow;
       margin: 0 auto;
-      margin-bottom: -1px;
+      margin-bottom: -2px;
     }
   }
 
@@ -84,7 +85,7 @@ footer {
   }
 
   a:active:after {
-    border-bottom: 1px solid $linkOrange_hover;
+    border-bottom: 2px solid $accent_yellow;
   }
 }
 
