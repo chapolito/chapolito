@@ -2,23 +2,116 @@
 title: Portfolio of Jesse Chapo
 ---
 
-= link_to '/fanpics' do
-  %section.fanpics-case-study.hero.row
-    .col-xs-offset-2.col-xs-22.col-sm-offset-2.col-sm-8
-      %h2 Fanpics
-      %p.work-description Android, iOS, &amp; Web Applications &middot; 2015&ndash;2016
-      %h5 View Work
 
-= link_to '/spritzr' do
-  %section.spritzr-case-study.hero.row
-    .col-xs-offset-2.col-xs-22
-      %h2 Spritzr
-      %p.work-description Web Application &middot; 2014
-      %h5 View Work
+.home-projects
+  %section.cover-photos.row
+    .col-xs-offset-1.col-xs-24.col-sm-12.square.square-group
+      = link_to '/' do
+        %h5.case-study-title Life360
+        .blobs
+          .blob 1
+          .blob 2
+          .blob 3
+          .blob 4
+        / .blobs.blobs2
+        /   .blob 1
+        /   .blob 2
+        /   .blob 3
+        /   .blob 4
+        = image_tag '/images/home/mobile-chat-ui.jpg'
 
-= link_to '/the-wiki-game' do
-  %section.the-wiki-game-case-study.hero.row
-    .col-xs-offset-2.col-xs-22
-      %h2 The Wiki Game
-      %p.work-description iOS &amp; Web Applications &middot; 2012&ndash;2013
-      %h5 View Work
+    .col-xs-offset-1.col-xs-24.col-sm-offset-0.col-sm-12.square.square-group
+      = link_to '/' do
+        %h6.case-study-title Fanpics
+        .blobs
+          .blob 1
+          .blob 2
+          .blob 3
+          .blob 4
+        = image_tag '/images/home/fanpics-app-ui.jpg'
+
+    .col-xs-offset-1.col-xs-24.col-sm-12.square-group
+      .row
+        .col-xs-13.square
+          = link_to '/' do
+            %h5.case-study-title Spritzr
+            .blobs
+              .blob 1
+              .blob 2
+              .blob 3
+              .blob 4
+            = image_tag '/images/home/heartstone.jpg'
+        .col-xs-13.square
+          = link_to '/' do
+            %h5.case-study-title Life360
+            .blobs
+              .blob 1
+              .blob 2
+              .blob 3
+              .blob 4
+            = image_tag '/images/home/chat-bubble-button.jpg'
+        .col-xs-26.square
+          = link_to '/' do
+            %h5.case-study-title.s1x2 ochapo.space
+            .blobs
+              .blob 1
+              .blob 2
+              .blob 3
+              .blob 4
+            = image_tag '/images/home/ochapo-wedding-icons.png'
+
+    .col-xs-offset-1.col-xs-24.col-sm-offset-0.col-sm-12.square.square-group
+      = link_to '/' do
+        %h5.case-study-title Spritzr
+        .blobs
+          .blob 1
+          .blob 2
+          .blob 3
+          .blob 4
+        = image_tag '/images/home/spritzr.jpg'
+
+    .col-xs-offset-1.col-xs-24.col-sm-12.square.square-group
+      = link_to '/' do
+        %h5.case-study-title The Wiki Game
+        .blobs
+          .blob 1
+          .blob 2
+          .blob 3
+          .blob 4
+        = image_tag '/images/home/wiki-game.jpg'
+
+    .col-xs-offset-1.col-xs-24.col-sm-offset-0.col-sm-12.square-group
+      .row
+        .col-xs-13.square
+          = link_to '/' do
+            %h5.case-study-title The Wiki Game
+            .blobs
+              .blob 1
+              .blob 2
+              .blob 3
+              .blob 4
+            = image_tag '/images/home/misty-mountains.jpg'
+        .col-xs-13.square
+          = link_to '/' do
+            %h5.case-study-title The Wiki Game
+            .blobs
+              .blob 1
+              .blob 2
+              .blob 3
+              .blob 4
+            = image_tag '/images/home/moment-of-the-game-badge.jpg'
+        .col-xs-26.square
+          = link_to '/' do
+            %h5.case-study-title.s1x2 Swoop Rides
+            .blobs
+              .blob 1
+              .blob 2
+              .blob 3
+              .blob 4
+            = image_tag '/images/home/swoop-icons.png'
+          
+    .col-xs-offset-1.col-xs-24.square.square-group
+      = link_to '/' do
+        = image_tag '/images/home/fanpics-shields.png'
+
+
