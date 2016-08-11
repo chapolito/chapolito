@@ -68,7 +68,7 @@ helpers do
   def is_page_active(page)
 
     # Highlight the Portfolio nav links for case studies
-    if ['/spritzr/', '/fanpics/', '/the-wiki-game/'].include?(current_page.url) and page == '/'
+    if ['/spritzr/', '/fanpics/', '/the-wiki-game/', '/life360/'].include?(current_page.url) and page == '/'
       return {:class => 'is-active'}
     end
 
