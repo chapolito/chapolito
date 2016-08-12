@@ -6,10 +6,14 @@ body.life360 {
 
 .life360-intro {
   background-image: url('/images/life360/curved-gradient.svg');
-  background-size: 100%;
+  background-size: auto 360pt;
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #fff;
+
+  .intro {
+    margin-top: rem($baseline * 2);
+  }
 }
 
 .life360-case-study {
@@ -79,101 +83,51 @@ body.life360 {
   h3 {
     margin-top: rem($baseline * 2);
   }
-
-  
 }
 
+@include at-least($phone-wide) {
+
+  .life360-intro {
+    background-size: auto 460pt;
+  }
+}
 
 @include at-least($tablet) {
+
+  .life360-intro {
+    background-size: auto 580pt;
+  }
+
   .weather-icons {
     margin-top: rem($baseline);
   }
 }
 
+@include at-least($medium-screen) {
+
+  .life360-intro {
+    background-size: auto 700pt;
+  }
+}
+
 @include at-least($large-screen) {
+
+  .life360-intro {
+    background-size: auto 820pt;
+  }
+
   .weather-icons {
     margin-top: rem($baseline * 2);
   }
 }
 
 @include at-least($xlarge-screen) {
+
+  .life360-intro {
+    background-size: auto 900pt;
+  }
+
   .life360-weather-layer h3 {
     margin-top: rem($baseline * 3);
   }
 }
-
-// // Fix for Mozilla not making line height block level
-// @-moz-document url-prefix() { 
-//   .spritzr-case-study p.intro:first-letter {
-//     padding: 16px 22px;
-//   }
-// }
-
-// .spritzr-case-study.hero {
-//   background-color: $spritzrLapis2;
-//   background-image: url('/images/spritzr/spritzr-cover-mobile.jpg');
-// }
-
-// .spritzr-date-icons {
-
-//   [class^='col-'], [class*='col-'] {
-//     margin-bottom: rem($baseline);
-//   }
-// }
-
-// .spritzr-date-icons-caption {
-//   margin-top: 0;
-// }
-
-// .spritzr-blue-section {
-//   background-color: $spritzrLapis2;
-//   @include background-image(radial-gradient(50% 25%, circle closest-corner, #24a7f2 0%, #2484f2 100%));
-
-//   p {
-//     color: $spritzrWhite2;
-//   }
-
-//   h3, .caption {
-//     color: $spritzrWhite1;
-//   }
-// }
-
-// .spritzr-wireframes {
-
-//   .row {
-//     background-color: $spritzrWhite2;
-//     padding: rem($baseline * 2) 0;
-//   }
-// }
-
-// .spritzr-web-designs {
-//   @extend .spritzr-blue-section;
-//   padding-top: rem($baseline * 4);
-
-//   img {
-//     @extend .spritzr-img-dropshadow;
-//   }
-// }
-
-// .spritzr-animations {
-  
-//   .row {
-//     background-color: $spritzrWhite2;
-//     padding-top: rem($baseline * 4);
-//   }
-
-//   video {
-//     @extend .spritzr-img-dropshadow;
-//   }
-// }
-
-// .spritzr-transactional-email {
-//   @extend .spritzr-blue-section;
-// }
-
-// @include at-least($phone-wide) {
- 
-//   .spritzr-case-study.hero {
-//     background-image: url('/images/spritzr/spritzr-cover.jpg');
-//   }
-// }
