@@ -74,6 +74,16 @@ helpers do
 
     current_page.url == page ? {:class => 'is-active'} : {}
   end
+
+  # Used for generating absolute URLs
+  # WARNING: (DOES NOT CARE ABOUT LOCAL HOST?PORT/ETC.
+  # This was built for use with og:image meta tags ONLY
+  set :protocol, "http://"
+  set :host, "www.chapolito.com"
+  def image_url(source)
+    protocol + host + image_path(source)
+  end
+
 end
 
 set :css_dir, 'stylesheets'
