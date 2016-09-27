@@ -76,7 +76,7 @@ helpers do
   end
 
   # Used for generating absolute URLs
-  # WARNING: (DOES NOT CARE ABOUT LOCAL HOST?PORT/ETC.
+  # WARNING: (DOES NOT CARE ABOUT LOCAL HOST/PORT/ETC.
   # This was built for use with og:image meta tags ONLY
   set :protocol, "http://"
   set :host, "www.chapolito.com"
