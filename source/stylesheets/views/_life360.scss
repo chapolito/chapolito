@@ -1,7 +1,6 @@
 
-body.life360 {
+.identifier-wrapper.life360 {
   @include background-image(none);
-  //background-color: $spritzrWhite1;
 }
 
 .life360-intro {
@@ -9,7 +8,6 @@ body.life360 {
   background-size: auto 360pt;
   background-repeat: no-repeat;
   background-position: top center;
-  //background-color: #fff;
 
   .intro {
     margin-top: rem($baseline * 2);

@@ -2,36 +2,36 @@
 title: About Jesse Chapo
 description: About Jesse Chapo and his past experience as a Product Designer as well as an overview of his design philosophy.
 ---
+%main
+  %section.row.animated
+    .col-xs-offset-2.col-xs-22.text-center
+      %h1 About
+    .col-xs-offset-2.col-xs-22.col-sm-offset-5.col-sm-16.col-md-offset-6.col-md-14.col-lg-offset-8.col-lg-10
+      .portrait.col-xs-offset-2.col-xs-22.col-sm-offset-2.col-sm-10
+        = image_tag 'jesse-chapo-portrait.jpg'
+      %p.intro
+        Hello! My name is Jesse Chapo and I'm a Senior Product Designer at
+        = succeed '.' do
+          = link_to 'Life360', 'https://www.life360.com'
+        Previously, I designed at
+        = succeed ',' do
+          = link_to 'Fanpics', 'https://www.fanpics.com'
+        = succeed ',' do
+          = link_to 'Spritzr', 'https://spritzr.com'
+        and MTV. I'm unapologetically a design generalist and resolute that my ancillary proficiencies in front-end dev, illustration, etc. only strengthen, not distract, from my design work.
 
-.row.animated
-  .col-xs-offset-2.col-xs-22.text-center
-    %h1 About
-  .col-xs-offset-2.col-xs-22.col-sm-offset-5.col-sm-16.col-md-offset-6.col-md-14.col-lg-offset-8.col-lg-10
-    .portrait.col-xs-offset-2.col-xs-22.col-sm-offset-2.col-sm-10
-      = image_tag 'jesse-chapo-portrait.jpg'
-    %p.intro
-      Hello! My name is Jesse Chapo and I'm a Senior Product Designer at 
-      = succeed '.' do
-        = link_to 'Life360', 'https://www.life360.com'
-      Previously, I designed at 
-      = succeed ',' do
-        = link_to 'Fanpics', 'https://www.fanpics.com'
-      = succeed ',' do
-        = link_to 'Spritzr', 'https://spritzr.com'
-      and MTV. I'm unapologetically a design generalist and resolute that my ancillary proficiencies in front-end dev, illustration, etc. only strengthen, not distract, from my design work. 
+      %p
+        I blog infrequently at
+        = link_to 'jessechapo.com', 'http://jessechapo.com'
+        and post on Dribbble as
+        = link_to 'chapolito', 'https://dribbble.com/chapolito'
+  %section.row.philosophy
+    .col-xs-offset-2.col-xs-22.text-center.animated
+      %h2 Design Philosophy
 
-    %p
-      I blog infrequently at 
-      = link_to 'jessechapo.com', 'http://jessechapo.com' 
-      and post on Dribbble as 
-      = link_to 'chapolito', 'https://dribbble.com/chapolito' 
-.philosophy.row
-  .col-xs-offset-2.col-xs-22.text-center.animated
-    %h2 Design Philosophy
-  
-  - data.philosophy.each do |tenant|
-    .col-xs-offset-2.col-xs-22.col-sm-10.col-md-6.col-lg-4.animated
-      %h5
-        = tenant.title
-        &nbsp;
-      %span= tenant.principle
+    - data.philosophy.each do |tenant|
+      .col-xs-offset-2.col-xs-22.col-sm-10.col-md-6.col-lg-4.animated
+        %h5
+          = tenant.title
+          &nbsp;
+        %span= tenant.principle

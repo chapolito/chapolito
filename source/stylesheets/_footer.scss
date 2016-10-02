@@ -1,7 +1,7 @@
 
 footer {
   background-color: $coolWhite;
-  border-top: 1px solid #D6DCE4;
+  border-top: 1px solid #EBF1FA;
   padding-top: rem($baseline * 4);
   padding-bottom: rem($baseline * 4);
 
@@ -36,12 +36,12 @@ footer {
   }
 }
 
-body.index footer {
+.identifier-wrapper.index footer {
   border-top: none;
 }
 
 .footer-logo {
-  
+
   img {
     display: none;
   }
@@ -149,4 +149,3 @@ body.index footer {
     }
   }
 }
-

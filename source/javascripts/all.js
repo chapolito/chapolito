@@ -1,2 +1,1 @@
-//= require animate-into-view
-//= require animate-header
+//= require animate-transitions

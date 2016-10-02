@@ -1,4 +1,9 @@
 
+.animate-content-out main {
+  @include transition(opacity 400ms ease-in);
+  opacity: 0;
+}
+
 header {
   @include box-shadow(10px 0 20px rgba($darkSlate, 0.1));
   background-color: rgba($coolWhite, 0.95);
@@ -6,6 +11,9 @@ header {
   top: 0;
   width: 100%;
   z-index: 10000;
+}
+
+.animate-header-in  header {
 
   .logo {
     @include animation(400ms ease-out 150ms both animate-header-in);
@@ -18,20 +26,20 @@ header {
   nav h5:nth-of-type(2) a {
     @include animation(400ms ease-out 350ms both animate-header-in);
   }
+}
 
-  &.animate-header-out {
+.animate-header-out header {
 
-    .logo {
-      @include animation(250ms ease-in both animate-header-out);
-    }
+  .logo {
+    @include animation(250ms ease-in both animate-header-out);
+  }
 
-    nav h5:nth-of-type(1) a {
-      @include animation(250ms ease-in 100ms both animate-header-out);
-    }
+  nav h5:nth-of-type(1) a {
+    @include animation(250ms ease-in 100ms both animate-header-out);
+  }
 
-    nav h5:nth-of-type(2) a {
-      @include animation(250ms ease-in 200ms both animate-header-out);
-    }
+  nav h5:nth-of-type(2) a {
+    @include animation(250ms ease-in 200ms both animate-header-out);
   }
 }
 
@@ -156,7 +164,7 @@ header {
     display: block;
     position: relative;
     margin-right: -0.2em;
-    
+
     &:after {
       @include transition(all 300ms ease-out);
       @include opacity(0);
@@ -169,7 +177,7 @@ header {
       bottom: 0;
       width: 80%;
       margin-left: 10%;
-    }  
+    }
   }
 
   .is-active a, .is-active a:after, a:hover, a:hover:after {
@@ -218,4 +226,3 @@ header {
     }
   }
 }
-
