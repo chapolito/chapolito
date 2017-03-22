@@ -25,6 +25,8 @@ gem 'compass-rails', :require => false
 # Use HAML for HTML
 gem 'haml'
 
+gem 'nokogiri'
+
 #gem 'actionview-encoded_mail_to'
 
 gem 'middleman-minify-html'
